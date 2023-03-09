@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change selection</title>
+    <style>
+        /*using psuedo class of::selection */
+        p::selection{
+            background-color: orangered;
+            color: antiquewhite;
+            text-shadow: 2px 3px 4px rgb(233,324,234);
+            /* if you want to add more styles to "p" element use another selector as p */
+            
+        }
+        p{
+            font-size: 40px;
+            margin-left: 50px;
+        }
+        h3{
+            margin-left: 50px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <p>now i'm selecting this paragraph is changing while selecting </p>
+    <h3>this is default selection </h3>
+    <button onclick="getselectedtext()">select text</button>
+    <script>
+        function getselectedtext(){
+            let txt = window.getSelection()
+            alert(txt);
+        }
+
+    </script>
+</html>
